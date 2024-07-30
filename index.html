@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Results summary component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="maincont">
+      <div id="fcont">
+        <p style="font-weight: 600; font-size: 25px">Your resault</p>
+        <div id="circle">
+          <span id="score"></span>
+          <span id="mmm">of 100</span>
+        </div>
+        <p style="font-size: 30px">Great</p>
+        <span
+          style="
+            opacity: 50%;
+            font-size: 16px;
+            text-align: center;
+            font-weight: 600;
+          "
+        >
+          You scored higher than 65% of the people who have taken these tests.
+        </span>
+      </div>
+      <div id="scont">
+        <div>
+          <p style="color: hsl(224, 30%, 27%); font-weight: 600">Summary</p>
+        </div>
+        <div id="Reaction">
+          <div
+            style="color: hsl(0, 100%, 67%); display: flex; flex-direction: row"
+          >
+            <img src="assets/images/icon-reaction.svg" />Reaction
+          </div>
+          <div id="nn11"></div>
+        </div>
+        <div id="Memory">
+          <div
+            style="
+              color: hsl(39, 100%, 56%);
+              display: flex;
+              flex-direction: row;
+            "
+          >
+            <img src="assets/images/icon-memory.svg" />Memory
+          </div>
+          <div id="nn12"></div>
+        </div>
+        <div id="Verbal">
+          <div
+            style="
+              color: hsl(166, 100%, 37%);
+              display: flex;
+              flex-direction: row;
+            "
+          >
+            <img src="assets/images/icon-verbal.svg" />Verbal
+          </div>
+          <div id="nn13"></div>
+        </div>
+        <div id="Visual">
+          <div
+            style="
+              color: hsl(234, 85%, 45%);
+              display: flex;
+              flex-direction: row;
+            "
+          >
+            <img src="assets/images/icon-visual.svg" />Visual
+          </div>
+          <div id="nn14"></div>
+        </div>
+        <div id="but">Continue</div>
+      </div>
+    </div>
+    <script>
+      function xs1() {
+        fetch("./data.json")
+          .then((Response) => Response.json())
+          .then((data) => {
+            let x0 = data[4].total;
+            let x0cont = document.getElementById("score");
+            x0cont.innerText = x0;
+            let x1 = data[0].score;
+            let x1cont = document.getElementById("nn11");
+            x1cont.innerText = x1 + "/100";
+            let x2 = data[1].score;
+            let x2cont = document.getElementById("nn12");
+            x2cont.innerText = x2 + "/100";
+            let x3 = data[2].score;
+            let x3cont = document.getElementById("nn13");
+            x3cont.innerText = x3 + "/100";
+            let x4 = data[3].score;
+            let x4cont = document.getElementById("nn14");
+            x4cont.innerText = x4 + "/100";
+          })
+          .catch((error) => {
+            console.error("Error fetching data:", error);
+          });
+      }
+      xs1();
+    </script>
+    <br />
+    <br />
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.linktr.ee/mohammad.alhassan" target="_blank"
+        >Mohammad alhassan</a
+      >.
+    </div>
+
+    <script src="main.js"></script>
+
+  </body>
+</html>

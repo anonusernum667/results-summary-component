@@ -1,0 +1,132 @@
+@font-face {
+  font-family: f1;
+  src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+* {
+  font-family: f1;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: hsl(221, 100%, 96%);
+}
+#maincont {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-shadow: 0px 0px 30px #5552527f;
+  border-radius: 19px;
+}
+
+#fcont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  border-radius: 0px 0px 19px 19px;
+  padding: 20px;
+  padding-top: 0px;
+}
+@media (min-width: 616px) {
+  body {
+    padding: 30px;
+    align-items: center;
+  }
+  #maincont {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  #fcont {
+    border-radius: 19px;
+  }
+}
+#circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+  padding: 50px;
+  height: 70px;
+  width: 70px;
+  border-radius: 100%;
+}
+#circle #score {
+  font-size: 50px;
+  font-weight: 700;
+  margin: opx;
+}
+#circle #mmm {
+  opacity: 50%;
+}
+#scont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+#scont #Reaction {
+  background-color: hsla(0, 100%, 67%, 0.095);
+  border-radius: 7px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 100%;
+}
+#scont #Memory {
+  background-color: hsla(39, 100%, 56%, 0.103);
+  border-radius: 7px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+  padding-top: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+#scont #Verbal {
+  background-color: hsla(166, 100%, 37%, 0.081);
+  border-radius: 7px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  padding-top: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+#scont #Visual {
+  background-color: hsla(234, 85%, 45%, 0.114);
+  border-radius: 7px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+  padding-top: 10px;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+#but {
+  color: white;
+  background-color: hsl(224, 30%, 27%);
+  text-align: center;
+  width: 50%;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 25px;
+  transition-duration: 600ms;
+}
+#but:hover {
+  background-color: hsl(252, 86%, 58%);
+}
